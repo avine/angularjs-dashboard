@@ -1,13 +1,13 @@
 (function () {
   "use strict";
 
-	angular.module('crm.dashboard')
+	angular.module('avn.dashboard')
 
 	// Include this element directive in the page to load the dashboard
-	// <crm-dashboard-layout data-editable="true"></crm-dashboard-layout>
-  .directive('crmDashboardLayout',
-  ['crm.dashboard.PATH', 'crmDashboardLayoutGetService', 'crmDashboardWidgetGetService',
-		'crmDashboardInstanceGetService', 'crmDashboardInstanceSetService', '$q',
+	// <avn-dashboard-layout data-editable="true"></avn-dashboard-layout>
+  .directive('avnDashboardLayout',
+  ['avn.dashboard.PATH', 'avnDashboardLayoutGetService', 'avnDashboardWidgetGetService',
+		'avnDashboardInstanceGetService', 'avnDashboardInstanceSetService', '$q',
   function (PATH, layoutGetService, widgetGetService, instanceGetService, instanceSetService, $q) {
     return {
 
@@ -98,7 +98,7 @@
         	// But in case the layout directive is displayed in an Angular view,
         	// at this point the ng-include scope contains both previous and new layouts !
         	// For this reason, we have to select only the new layout which is the :first one (tested using ui-route)
-        	scope.containersLength = element.find('.crm-dashboard-layout-content:first [crm-dashboard-container]').length;
+        	scope.containersLength = element.find('.avn-dashboard-layout-content:first [avn-dashboard-container]').length;
         };
 
       	// After all the containers have registered themselves in the layout scope,
@@ -155,7 +155,7 @@
         };
 
       	// Retore hidden widget in the list of widgets when it has been removed from a container
-        scope.$on('crmDashboardContainerWidgetRemoved', function (e, widget) {
+        scope.$on('avnDashboardContainerWidgetRemoved', function (e, widget) {
         	var scopeWidget = scope.widgets[getWidgetIndex(widget)];
         	if (scopeWidget.hidden) delete scopeWidget.hidden;
         });
@@ -211,8 +211,8 @@
 
 	// A simple directive that display a drop down list and allow the user to select layout, container and widget...
 	// To handle the selection, use a $watch in the parent directive
-  .directive('crmDashboardSelect',
-  ['crm.dashboard.PATH',
+  .directive('avnDashboardSelect',
+  ['avn.dashboard.PATH',
   function (PATH) {
 
     return {
@@ -235,8 +235,8 @@
       	// Default prop, hideProp and css values
         scope.prop = scope.prop || 'title';
         scope.hideProp = scope.hideProp || 'hidden';
-        scope.css = scope.css || 'crm-dashboard-select-active';
-        scope.event = scope.event || 'crmDashboardSelect';
+        scope.css = scope.css || 'avn-dashboard-select-active';
+        scope.event = scope.event || 'avnDashboardSelect';
       	// Set the selected index
         scope.set = function (index) {
         	scope.$emit(scope.event, scope.index = index);

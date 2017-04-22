@@ -1,14 +1,14 @@
 
-<div class="crm-dashboard" ng-class="!edit || 'crm-dashboard-edit'">
+<div class="avn-dashboard" ng-class="!edit || 'avn-dashboard-edit'">
 
-  <div class="crm-dashboard-layout-tools" ng-if="isEditable">
+  <div class="avn-dashboard-layout-tools" ng-if="isEditable">
     <form class="btn-group">
 
       <button class="btn btn-sm btn-default"
         ng-if="isEditable" ng-click="toggleEdit()"><i class="fa fa-cog"></i></button>
 
-      <crm-dashboard-select ng-if="edit" data-title="Layout" data-items="layouts"
-				data-default-index="layoutIndex" data-event="selectLayoutIndex"></crm-dashboard-select>
+      <avn-dashboard-select ng-if="edit" data-title="Layout" data-items="layouts"
+				data-default-index="layoutIndex" data-event="selectLayoutIndex"></avn-dashboard-select>
 
     </form>
   </div>
@@ -18,5 +18,5 @@
     <div ng-repeat="message in messages">{{message}}</div>
 	</div>
 
-  <div class="crm-dashboard-layout-content" ng-include="getLayoutPath()" data-onload="getContainersLength()"></div>
+  <div class="avn-dashboard-layout-content" ng-include="getLayoutPath()" data-onload="getContainersLength()"></div>
 </div>

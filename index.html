@@ -31,7 +31,7 @@
 	<script src="fake/fakeDirectivesWidgets.js"></script>
 
 	<script>
-	angular.module('app', ['crm.dashboard']).controller('AppCtrl', [function () {
+	angular.module('app', ['avn.dashboard']).controller('AppCtrl', [function () {
 
 		this.dashboardConfig = {
 			layoutsGetUrl: 'fake/fakeLayoutsGetService.json',
@@ -41,7 +41,7 @@
 		};
 
 	}])
-	//.constant('crm.dashboard.PATH', 'src/') // Don't forget to configure the all files location
+	//.constant('avn.dashboard.PATH', 'src/') // Don't forget to configure the all files location
 	;
 	</script>
 
@@ -57,7 +57,7 @@
 					<h1><i class="fa fa-home"></i> Dashboard</h1>
 				</div>
 
-				<crm-dashboard-layout data-editable="true" config="appVm.dashboardConfig"></crm-dashboard-layout>
+				<avn-dashboard-layout data-editable="true" config="appVm.dashboardConfig"></avn-dashboard-layout>
 
 			</div>
 

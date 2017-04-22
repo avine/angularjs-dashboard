@@ -1,11 +1,11 @@
 (function () {
   "use strict";
 
-	angular.module('crm.dashboard')
+	angular.module('avn.dashboard')
 
 	// Retrieve available widgets
-	.factory('crmDashboardWidgetGetService',
-  ['$http', 'crm.dashboard.WIDGETS_GET_URL',
+	.factory('avnDashboardWidgetGetService',
+  ['$http', 'avn.dashboard.WIDGETS_GET_URL',
   function ($http, URL) {
   	return function (url, callback) {
 

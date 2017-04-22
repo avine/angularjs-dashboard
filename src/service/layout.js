@@ -1,11 +1,11 @@
 (function () {
   "use strict";
 
-  angular.module('crm.dashboard')
+  angular.module('avn.dashboard')
 
 	// Retrieve available layouts
-	.factory('crmDashboardLayoutGetService',
-  ['crm.dashboard.LAYOUTS_GET_URL', '$http', '$q',
+	.factory('avnDashboardLayoutGetService',
+  ['avn.dashboard.LAYOUTS_GET_URL', '$http', '$q',
   function (URL, $http, $q) {
   	return function (url, callback) {
 
@@ -17,8 +17,8 @@
   }])
 
 	// Get dashboard instances
-	.factory('crmDashboardInstanceGetService',
-  ['crm.dashboard.INSTANCES_GET_URL', '$http', '$q',
+	.factory('avnDashboardInstanceGetService',
+  ['avn.dashboard.INSTANCES_GET_URL', '$http', '$q',
   function (URL, $http, $q) {
   	return function (url, callback) {
 
@@ -30,8 +30,8 @@
   }])
 
 	// Post dashboard instances
-	.factory('crmDashboardInstanceSetService',
-  ['crm.dashboard.INSTANCES_SET_URL', '$http', '$q',
+	.factory('avnDashboardInstanceSetService',
+  ['avn.dashboard.INSTANCES_SET_URL', '$http', '$q',
   function (URL, $http, $q) {
   	return function (url, data, callback) {
   		

@@ -1,12 +1,12 @@
 (function () {
 	"use strict";
 
-	angular.module('crm.dashboard').directive('crmDashboardWidget',
-  ['crm.dashboard.PATH', '$compile',
+	angular.module('avn.dashboard').directive('avnDashboardWidget',
+  ['avn.dashboard.PATH', '$compile',
   function (PATH, $compile) {
   	return {
 
-  		require: '^crmDashboardContainer',
+  		require: '^avnDashboardContainer',
 
   		scope: {
   			details: '='
@@ -28,15 +28,15 @@
   			};
 
   			// All directives of widget item have a unique prefix which is:
-  			//			"crmDashboardWidgetItem"
+  			//			"avnDashboardWidgetItem"
   			// By convention, the params.type represents the directive suffix in camel case.
   			// For example, if the params.type is:
   			//			"UserList"
   			// then the full name of the directive is:
-  			//			"crmDashboardWidgetItemUserList"
+  			//			"avnDashboardWidgetItemUserList"
   			// In this case, the directive attribute inserted in the DOM is:
-  			//			<div crm-dashboard-widget-item-user-list"></div>
-  			var directiveName = 'crmDashboardWidgetItem' + scope.details.type,
+  			//			<div avn-dashboard-widget-item-user-list"></div>
+  			var directiveName = 'avnDashboardWidgetItem' + scope.details.type,
   					directiveAttr = jsProp2HtmlAttr(directiveName);
 
   			//// For debugging you can check the following assertion
@@ -52,7 +52,7 @@
   			};
 
   			// Compile the widget item directive
-  			element.find('.crm-dashboard-widget-content').append(
+  			element.find('.avn-dashboard-widget-content').append(
 					$compile('<div ' + directiveAttr + ' config="config"></div>')(scope)[0]
         );
   		},

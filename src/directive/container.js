@@ -3,18 +3,18 @@
 
 	// Add a container somewhere in the layout that will contains associated widgets instances
 	//
-	// <div crm-dashboard-container
+	// <div avn-dashboard-container
   //		data-list="widgets"
 	//		data-instance="instances.[CONTAINER_NAME]"></div>
 	//
-  angular.module('crm.dashboard').directive('crmDashboardContainer',
-  ['crm.dashboard.PATH', '$rootScope', '$compile',
+  angular.module('avn.dashboard').directive('avnDashboardContainer',
+  ['avn.dashboard.PATH', '$rootScope', '$compile',
   function (PATH, $rootScope, $compile) {
     return {
 
       restrict: 'A',
 
-      require: '^crmDashboardLayout',
+      require: '^avnDashboardLayout',
 
       replace: false,
 
@@ -51,7 +51,7 @@
             widget.index = i;
             widget.lastIndex = lastIndex;
         	});
-        	$scope.$emit('crmDashboardContainerWidgetRemoved', {
+        	$scope.$emit('avnDashboardContainerWidgetRemoved', {
         		type: removed.type, params: removed.params
         	});
         };

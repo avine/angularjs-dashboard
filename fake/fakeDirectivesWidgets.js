@@ -1,9 +1,9 @@
 (function () {
 	"use strict";
 
-	var prefix = 'crmDashboardWidgetItem';
+	var prefix = 'avnDashboardWidgetItem';
 
-	angular.module('crm.dashboard')
+	angular.module('avn.dashboard')
 
   .directive(prefix + 'HelloWorld', [function () {
   	return {
