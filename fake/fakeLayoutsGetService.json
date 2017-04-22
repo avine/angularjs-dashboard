@@ -1,0 +1,9 @@
+[
+	{ "title": "Main", "file": "layout-main.html" },
+	{ "title": "2 columns", "file": "layout-2columns.html" },
+	{ "title": "3 columns", "file": "layout-3columns.html" },
+	{ "title": "Right sidebar", "file": "layout-sidebar-right.html" },
+	{ "title": "Left sidebar", "file": "layout-sidebar-left.html" },
+	{ "title": "Top and bottom", "file": "layout-sidebar-top-bottom.html" },
+	{ "title": "Tops and bottoms", "file": "layout-sidebar-tops-bottoms.html" }
+]

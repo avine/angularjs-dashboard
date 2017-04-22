@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Dashboard Demo</title>
+
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+	<script src="plugins/jquery/jquery.min.js"></script>
+	<script src="plugins/angular/angular.min.js"></script>
+
+	<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-theme.css" />
+	<script src="plugins/bootstrap/js/bootstrap.js"></script>
+
+	<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" />
+
+	<link rel="stylesheet" href="src/css/style.css" />
+
+	<script src="src/module.js"></script>
+
+	<script src="src/directive/layout.js"></script>
+	<script src="src/directive/container.js"></script>
+	<script src="src/directive/widget.js"></script>
+
+	<script src="src/service/layout.js"></script>
+	<script src="src/service/widget.js"></script>
+
+	<script src="fake/fakeDirectivesWidgets.js"></script>
+
+	<script>
+	angular.module('app', ['crm.dashboard']).controller('AppCtrl', [function () {
+
+		this.dashboardConfig = {
+			layoutsGetUrl: 'fake/fakeLayoutsGetService.json',
+			widgetsGetUrl: 'fake/fakeWidgetsGetService.json',
+			instancesGetUrl: 'fake/fakeInstancesGetService.json',
+			instanceSetUrl: undefined // The dashboard will not be saved...
+		};
+
+	}])
+	//.constant('crm.dashboard.PATH', 'src/') // Don't forget to configure the all files location
+	;
+	</script>
+
+</head>
+<body ng-app="app" ng-controller="AppCtrl as appVm">
+
+	<div class="container-fluid">
+		<div class="row">
+
+			<div class="col-xs-12">
+
+				<div class="page-header">
+					<h1><i class="fa fa-home"></i> Dashboard</h1>
+				</div>
+
+				<crm-dashboard-layout data-editable="true" config="appVm.dashboardConfig"></crm-dashboard-layout>
+
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+.crm-dashboard .crm-dashboard-layout-tools {
+  margin-bottom: 15px;
+}
+.crm-dashboard .crm-dashboard-select-active {
+  font-weight: bold;
+}
+.crm-dashboard .crm-dashboard-container-tools {
+  display: none;
+  margin-bottom: 15px;
+  color: #111;
+  text-align: center;
+}
+.crm-dashboard .crm-dashboard-container-tools .crm-dashboard-select-active {
+  font-weight: normal;
+}
+.crm-dashboard crm-dashboard-widget {
+  display: block;
+  position: relative;
+}
+.crm-dashboard .crm-dashboard-widget-tools {
+  position: absolute;
+  right: 0;
+  display: none;
+}
+.crm-dashboard .crm-dashboard-widget-tools > * {
+  margin-right: 1em;
+}
+.crm-dashboard .crm-dashboard-widget-unwrap {
+  box-shadow: none !important;
+  border: none !important;
+  background: none !important;
+}
+.crm-dashboard .crm-dashboard-widget-unwrap .crm-dashboard-widget-title {
+  display: none;
+}
+.crm-dashboard .crm-dashboard-widget-unwrap .crm-dashboard-widget-content {
+  padding: 0 !important;
+}
+.crm-dashboard .crm-dashboard-widget-unwrap .crm-dashboard-widget-content > * > :first-child {
+  margin-top: 0 !important;
+}
+.crm-dashboard .crm-dashboard-widget-unwrap .crm-dashboard-widget-content > * > :last-child {
+  margin-bottom: 0 !important;
+}
+.crm-dashboard .crm-dashboard-widget-content {
+  transition: opacity ease .25s;
+}
+.crm-dashboard.crm-dashboard-edit .crm-dashboard-layout-tools {
+  display: inline-block;
+}
+.crm-dashboard.crm-dashboard-edit [crm-dashboard-container] {
+  min-height: 4em;
+  border-radius: 3px;
+  border: 3px dashed #ddd;
+  background-color: #fafafa;
+  margin-bottom: 15px;
+  padding: 6px;
+}
+.crm-dashboard.crm-dashboard-edit .crm-dashboard-container-tools {
+  display: block;
+}
+.crm-dashboard.crm-dashboard-edit .crm-dashboard-widget-tools {
+  display: inline-block;
+}
+.crm-dashboard.crm-dashboard-edit .crm-dashboard-widget-unwrap {
+  border: 2px dotted #2aabd2 !important;
+  background-color: #fff;
+}
+.crm-dashboard.crm-dashboard-edit .crm-dashboard-widget-unwrap .crm-dashboard-widget-title {
+  display: block;
+}
+.crm-dashboard.crm-dashboard-edit .crm-dashboard-widget-content {
+  opacity: .3;
+}

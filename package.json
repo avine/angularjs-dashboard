@@ -1,0 +1,35 @@
+{
+  "name": "angularjs-dashboard",
+  "version": "1.0.0",
+  "description": "A simple AngularJS dashboard",
+  "main": "index.js",
+  "scripts": {
+    "mkdir": "shx rm -rf plugins/ && shx mkdir plugins/",
+    "cp-ng": "shx cp -r node_modules/angular/ plugins/angular/",
+    "cp-bs": "shx cp -r node_modules/bootstrap/dist/ plugins/bootstrap/",
+    "cp-fa": "shx cp -r node_modules/font-awesome/ plugins/font-awesome/",
+    "cp-jq": "shx cp -r node_modules/jquery/dist/ plugins/jquery/",
+    "build": "npm run mkdir -s && npm run cp-ng -s && npm run cp-bs -s && npm run cp-fa -s && npm run cp-jq -s",
+    "test": "http-server ./ -o -c0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avine/angularjs-dashboard.git"
+  },
+  "author": "Francel Stéphane <s.francel@avine.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/avine/angularjs-dashboard/issues"
+  },
+  "homepage": "https://github.com/avine/angularjs-dashboard#readme",
+  "dependencies": {
+    "angular": "^1.5.11",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^2.2.4"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "shx": "^0.2.2"
+  }
+}

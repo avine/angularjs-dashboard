@@ -1,0 +1,99 @@
+
+.crm-dashboard {
+
+  .crm-dashboard-layout-tools {
+    margin-bottom: 15px;
+  }
+
+  .crm-dashboard-select-active {
+    font-weight: bold;
+  }
+
+  .crm-dashboard-container-tools {
+    display: none;
+    margin-bottom: 15px;
+    color: #111;
+    text-align: center;
+
+    .crm-dashboard-select-active {
+      font-weight: normal; // No need to highlight the selected widget
+    }
+  }
+
+  crm-dashboard-widget {
+    display: block;
+    position: relative;
+  }
+
+  .crm-dashboard-widget-tools {
+    position: absolute;
+    right: 0;
+    display: none;
+    > * {
+      margin-right: 1em;
+    }
+  }
+
+  .crm-dashboard-widget-unwrap {
+    box-shadow: none !important;
+    border: none !important;
+    background: none !important;
+    .crm-dashboard-widget-title {
+      display: none;
+    }
+		.crm-dashboard-widget-content {
+      padding: 0 !important;
+			> * {
+				// Remove margin of the widget item content
+				> :first-child {
+					margin-top: 0 !important;
+				}
+				> :last-child {
+					margin-bottom: 0 !important;
+				}
+			}
+    }
+  }
+
+	.crm-dashboard-widget-content {
+		transition: opacity ease .25s;
+	}
+
+  &.crm-dashboard-edit {
+
+    .crm-dashboard-layout-tools {
+      display: inline-block;
+    }
+
+    [crm-dashboard-container] {
+      min-height: 4em;
+      border-radius: 3px;
+      border: 3px dashed #ddd;
+      background-color: #fafafa;
+      margin-bottom: 15px;
+      padding: 6px;
+    }
+
+    .crm-dashboard-container-tools {
+      display: block;
+    }
+
+    .crm-dashboard-widget-tools {
+      display: inline-block;
+    }
+
+    .crm-dashboard-widget-unwrap {
+      border: 2px dotted #2aabd2 !important;
+      background-color: #fff;
+      .crm-dashboard-widget-title {
+        display: block;
+      }
+    }
+
+		.crm-dashboard-widget-content {
+			opacity: .3;
+		}
+
+  }
+
+}

@@ -1,0 +1,12 @@
+
+<div class="btn-group">
+  <button class="btn btn-sm btn-info dropdown-toggle" data-toggle="dropdown"
+    ng-disabled="!items.length">{{title}} <span class="caret"></span></button>
+
+  <ul class="dropdown-menu">
+    <li ng-repeat="item in items" ng-hide="item[hideProp]">
+      <a href="#"
+        ng-click="set($index)"
+        ng-class="index != $index || css">{{item[prop]}}</a></li>
+  </ul>
+</div>

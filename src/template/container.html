@@ -1,0 +1,7 @@
+
+<div class="crm-dashboard-container-tools">
+	<crm-dashboard-select data-title="Add widget" data-items="list"
+		data-event="selectWidgetIndex"></crm-dashboard-select>
+</div>
+
+<crm-dashboard-widget ng-repeat="widget in instance" data-details="widget"></crm-dashboard-widget>

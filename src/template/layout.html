@@ -1,0 +1,22 @@
+
+<div class="crm-dashboard" ng-class="!edit || 'crm-dashboard-edit'">
+
+  <div class="crm-dashboard-layout-tools" ng-if="isEditable">
+    <form class="btn-group">
+
+      <button class="btn btn-sm btn-default"
+        ng-if="isEditable" ng-click="toggleEdit()"><i class="fa fa-cog"></i></button>
+
+      <crm-dashboard-select ng-if="edit" data-title="Layout" data-items="layouts"
+				data-default-index="layoutIndex" data-event="selectLayoutIndex"></crm-dashboard-select>
+
+    </form>
+  </div>
+
+  <div ng-if="messages.length" class="alert alert-warning alert-dismissible">
+		<button ng-click="removeMessages()" class="close" data-dismiss="alert"><span>&times;</span></button>
+    <div ng-repeat="message in messages">{{message}}</div>
+	</div>
+
+  <div class="crm-dashboard-layout-content" ng-include="getLayoutPath()" data-onload="getContainersLength()"></div>
+</div>

@@ -1,0 +1,26 @@
+{
+
+	"layoutFile": "layout-sidebar-tops-bottoms.html",
+
+	"widgetsInstances": {
+
+		"top": [
+			{ "type": "News", "params": { "message": "This is an alert message." }, "title": "Alert !" }
+		],
+
+		"topRight": [
+			{ "type": "News", "params": { "message": "This is an News information." }, "title": "Last News" }
+		],
+
+		"sidebar": [
+			{ "type": "Welcome", "params": { "firstName": "Stephane", "lastName": "Francel" }, "title": "Welcome" },
+			{ "type": "LoremIpsum", "params": {}, "title": "Lorem Ipsum" }
+		],
+
+		"main": [
+			{ "type": "HelloWorld", "params": {}, "title": "Hello world" }
+		]
+
+	}
+
+}

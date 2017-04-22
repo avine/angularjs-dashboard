@@ -1,0 +1,7 @@
+[
+	{ "title": "Hello world", "type": "HelloWorld", "params": {}, "color": "info", "icon": "comment", "wrap": true, "multiple": true },
+	{ "title": "Lorem Ipsum", "type": "LoremIpsum", "params": {}, "wrap": false, "multiple": true },
+	{ "title": "Welcome", "type": "Welcome", "params": { "firstName": "Stephane", "lastName": "Francel" }, "wrap": false, "multiple": false },
+	{ "title": "Last News", "type": "News", "params": { "message": "This is an News information." }, "color": "", "icon": "newspaper-o", "wrap": true, "multiple": true },
+	{ "title": "Alert !", "type": "News", "params": { "message": "This is an alert message." }, "color": "danger", "icon": "exclamation-triangle", "wrap": true, "multiple": true }
+]
